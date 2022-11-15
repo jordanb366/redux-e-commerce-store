@@ -11,8 +11,12 @@ import {
   TOGGLE_CART,
 } from "./actions";
 
+const initialState = {
+  value: 0,
+};
+
 // TODO: To get a better understand of how a reducer works - add comments to the various actions in the reducer
-export const reducer = (state, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     // TODO: Add a comment describing the functionality of the UPDATE_PRODUCTS case
     // UPDATE_PRODUCTS returns the state with spread operator, then gives the products and action.products
