@@ -1,10 +1,11 @@
 import React, { createContext, useContext } from "react";
-import { useProductReducer } from "./reducers";
+import { reducer } from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 // const StoreContext = createContext();
 // const { Provider } = StoreContext;
-const store = createStore(useProductReducer);
+const store = createStore(reducer);
+console.log(store);
 
 // const StoreProvider = ({ value = [], ...props }) => {
 //   const [state, dispatch] = useProductReducer({
