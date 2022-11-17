@@ -4,8 +4,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 // const StoreContext = createContext();
 // const { Provider } = StoreContext;
-
-const store = Redux.createStore(useProductReducer);
+const store = createStore(useProductReducer);
 
 // const StoreProvider = ({ value = [], ...props }) => {
 //   const [state, dispatch] = useProductReducer({
@@ -19,7 +18,7 @@ const store = Redux.createStore(useProductReducer);
 //   return <Provider value={[state, dispatch]} {...props} />;
 // };
 
-const StoreProvider = ({ value = [], ...props }) => {
+const StoreProvider = (props) => {
   return <Provider store={store} {...props} />;
 };
 
