@@ -13,4 +13,4 @@ A redux e-commerce store, this was an existing MERN e-commerce shopping store th
 
 ## Link to deployed App
 
-[Link to deploy app](https://stormy-atoll-16065.herokuapp.com/)
+[Link to deployed app](https://stormy-atoll-16065.herokuapp.com/)
