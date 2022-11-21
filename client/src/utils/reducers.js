@@ -11,6 +11,7 @@ import {
   TOGGLE_CART,
 } from "./actions";
 
+// The intitial state for products, cart, cartOpen, categories, and current Category
 const initialState = {
   products: [],
   cart: [],

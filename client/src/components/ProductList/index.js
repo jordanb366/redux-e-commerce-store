@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
-
+// Import dispatch and selector for state
 import { useDispatch, useSelector } from "react-redux";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from "@apollo/client";
@@ -9,7 +9,9 @@ import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif";
 
 function ProductList() {
+  // saves the useSelector into a variable named state
   const state = useSelector((state) => state);
+  // saves the useDispatch into a variable named dispatch
   const dispatch = useDispatch();
 
   const { currentCategory } = state;
