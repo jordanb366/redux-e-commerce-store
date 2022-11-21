@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -19,10 +19,8 @@ const initialState = {
   currentCategory: "",
 };
 
-// TODO: To get a better understand of how a reducer works - add comments to the various actions in the reducer
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    // TODO: Add a comment describing the functionality of the UPDATE_PRODUCTS case
     // UPDATE_PRODUCTS returns the state with spread operator, then gives the products and action.products
     case UPDATE_PRODUCTS:
       return {
@@ -42,7 +40,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         cart: [...state.cart, ...action.products],
       };
-    // TODO: Add a comment describing the functionality of the UPDATE_CART_QUANTITY case
+
     // has state with spread operation, then maps through the state array for the cart
     case UPDATE_CART_QUANTITY:
       return {
@@ -56,7 +54,6 @@ export const reducer = (state = initialState, action) => {
         }),
       };
 
-    // TODO: Add a comment describing the functionality of the REMOVE_FROM_CART case
     // filters the state.cart for product, returns product._id
     case REMOVE_FROM_CART:
       let newState = state.cart.filter((product) => {
@@ -94,13 +91,8 @@ export const reducer = (state = initialState, action) => {
         currentCategory: action.currentCategory,
       };
 
-    // TODO: Add a comment describing what the default case is for
     // Returns the default state
     default:
       return state;
   }
 };
-
-// export function useProductReducer(initialState) {
-//   return useReducer(reducer, initialState);
-// }
